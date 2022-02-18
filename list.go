@@ -48,7 +48,9 @@ type listCommand struct {
 }
 
 func (cmd *listCommand) Run(args []string) (err error) {
-	reexec()
+	if _, err := unshare(); err != nil {
+		return err
+	}
 
 	// Create the context.
 	id := identity.NewID()
