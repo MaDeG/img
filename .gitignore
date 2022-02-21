@@ -60,4 +60,3 @@ internal/binutils/runc.go
 .envrc
 .idea
 
-vendor/
