@@ -51,7 +51,9 @@ func (cmd *pushCommand) ValidateArgs(c *cobra.Command, args []string) error {
 }
 
 func (cmd *pushCommand) Run(args []string) (err error) {
-	reexec()
+	if _, err := unshare(); err != nil {
+		return err
+	}
 
 	// Get the specified image.
 	cmd.image = args[0]

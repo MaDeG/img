@@ -56,7 +56,9 @@ func (cmd *saveCommand) ValidateArgs(c *cobra.Command, args []string) error {
 }
 
 func (cmd *saveCommand) Run(args []string) (err error) {
-	reexec()
+	if _, err := unshare(); err != nil {
+		return err
+	}
 
 	// Create the context.
 	id := identity.NewID()

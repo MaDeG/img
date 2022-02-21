@@ -2,16 +2,15 @@ package main
 
 import (
 	"fmt"
-	"os"
-	"path/filepath"
-	"strings"
-
+	"github.com/docker/docker/pkg/reexec"
 	"github.com/genuinetools/img/internal/binutils"
-	_ "github.com/genuinetools/img/internal/unshare"
 	"github.com/genuinetools/img/types"
 	"github.com/genuinetools/img/version"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
+	"os"
+	"path/filepath"
+	"strings"
 )
 
 const (
@@ -51,6 +50,10 @@ Use "{{.CommandPath}} [command] --help" for more information about a command.{{e
 
 func main() {
 	var printVersionAndExit bool
+
+	if reexec.Init() {
+		return
+	}
 
 	cmd := &cobra.Command{
 		Use:              "img [OPTIONS] COMMAND [ARG...]",

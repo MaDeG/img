@@ -47,7 +47,9 @@ type pullCommand struct {
 }
 
 func (cmd *pullCommand) Run(args []string) (err error) {
-	reexec()
+	if _, err := unshare(); err != nil {
+		return err
+	}
 
 	// Get the specified image.
 	cmd.image = args[0]

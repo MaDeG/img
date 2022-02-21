@@ -18,17 +18,25 @@ require (
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0
 	github.com/genuinetools/reg v0.16.0
+	github.com/jteeuwen/go-bindata v3.0.7+incompatible // indirect
 	github.com/mitchellh/hashstructure v1.0.0 // indirect
 	github.com/moby/buildkit v0.7.2
+	github.com/moby/moby v17.12.0-ce-rc1.0.20200227233006-38f52c9fec82+incompatible // indirect
 	github.com/opencontainers/image-spec v1.0.1
 	github.com/opencontainers/runc v1.0.0-rc9.0.20200221051241-688cf6d43cc4
 	github.com/opentracing-contrib/go-stdlib v0.0.0-20180702182724-07a764486eb1 // indirect
 	github.com/opentracing/opentracing-go v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1
-	github.com/sirupsen/logrus v1.6.0
+	github.com/prometheus/procfs v0.0.5 // indirect
+	github.com/rootless-containers/rootlesskit v0.14.6
+	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v0.0.5
 	go.etcd.io/bbolt v1.3.5
-	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
+	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
+	golang.org/x/net v0.0.0-20211105192438-b53810dc28af // indirect
+	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+	golang.org/x/tools v0.1.9 // indirect
 	google.golang.org/grpc v1.27.1
 )
 

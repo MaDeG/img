@@ -141,7 +141,9 @@ func (cmd *buildCommand) ValidateArgs(c *cobra.Command, args []string) error {
 }
 
 func (cmd *buildCommand) Run(args []string) (err error) {
-	reexec()
+	if _, err := unshare(); err != nil {
+		return err
+	}
 
 	// Get the specified context.
 	cmd.contextDir = args[0]
