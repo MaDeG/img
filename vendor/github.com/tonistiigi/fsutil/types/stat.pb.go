@@ -245,7 +245,7 @@ func (this *Stat) GoString() string {
 	s = append(s, "Devmajor: "+fmt.Sprintf("%#v", this.Devmajor)+",\n")
 	s = append(s, "Devminor: "+fmt.Sprintf("%#v", this.Devminor)+",\n")
 	keysForXattrs := make([]string, 0, len(this.Xattrs))
-	for k, _ := range this.Xattrs {
+	for k := range this.Xattrs {
 		keysForXattrs = append(keysForXattrs, k)
 	}
 	github_com_gogo_protobuf_sortkeys.Strings(keysForXattrs)
@@ -433,7 +433,7 @@ func (this *Stat) String() string {
 		return "nil"
 	}
 	keysForXattrs := make([]string, 0, len(this.Xattrs))
-	for k, _ := range this.Xattrs {
+	for k := range this.Xattrs {
 		keysForXattrs = append(keysForXattrs, k)
 	}
 	github_com_gogo_protobuf_sortkeys.Strings(keysForXattrs)

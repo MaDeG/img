@@ -54,10 +54,10 @@ const (
 )
 
 var units = map[bool][]string{
-	false: []string{
+	false: {
 		"B", "kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB",
 	},
-	true: []string{
+	true: {
 		"B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB",
 	},
 }
